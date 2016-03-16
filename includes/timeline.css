@@ -44,3 +44,23 @@ body {
 	background: linear-gradient(to right,  #26016a 45%,#d14001 50%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26016a', endColorstr='#d14001',GradientType=1 ); /* IE6-9 */
 }
+
+.timeline .background_slider {
+	position: absolute;
+	width: inherit;
+	height: inherit;	
+}
+
+.timeline .background_slider img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.timeline .panel_slider {
+	width: 100%;
+}
+
+.timeline .panel {
+	width: 340px;
+}

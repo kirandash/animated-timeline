@@ -63,6 +63,7 @@ body {
 
 .timeline .panel {
 	width: 340px;
+	position: absolute;
 }
 
 .timeline .panel_content {

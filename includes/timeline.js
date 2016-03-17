@@ -9,6 +9,8 @@ var currentPanel = 0;
 $(document).ready(function() {
     
 	panelWidth = $('.timeline .panel').width();
+	timelineWidth = $('.timeline').width();
+	totalPanels = $('.timeline .panel').length;
 	
 	adjustLayout();
 	
@@ -23,6 +25,24 @@ function adjustLayout(){
 		var newLabel = $(this).find('.label').html();
 		$('.timeline nav').append('<a href="#">'+newLabel+'</a>');
     });
+	
+	currentPanel = $('.timeline nav a:last-child()').index();
+	
+	activeNavigation();
 }
 
+function activeNavigation(){
+	
+	$('.timeline nav a').on('click', function(){
+		currentPanel = $(this).index();
+		
+		$('.timeline nav a').removeClass('selected');
+		$(this).addClass('selected');
+		
+		var timelineOffset = (timelineWidth - panelWidth) * 0.5;
+		var newPosition = ((currentPanel*panelWidth)*-1) + timelineOffset;
+		
+		$('.panel_slider').animate({left: newPosition+'px'}, 1000);
+	});
+}
 

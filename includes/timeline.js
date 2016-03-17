@@ -43,6 +43,16 @@ function activeNavigation(){
 		var newPosition = ((currentPanel*panelWidth)*-1) + timelineOffset;
 		
 		$('.panel_slider').animate({left: newPosition+'px'}, 1000);
+		
+		var backgroundWidth = $('.timeline .background_slider img').width();
+		var moveAmount = (backgroundWidth - timelineWidth) / totalPanels;
+		if(currentPanel != 0){
+			var multiplier = currentPanel + 1;
+		}else{
+			var multiplier = 0;
+		}
+		var newBackgroundPosition = (moveAmount * multiplier) * -1;
+		$('.background_slider img.background').animate({left:newBackgroundPosition+'px'},1000);
 	});
 }
 

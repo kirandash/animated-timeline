@@ -21,7 +21,7 @@ function adjustLayout(){
 		$(this).css('left', newX+'px');
 		
 		var newLabel = $(this).find('.label').html();
-		$('.timeline .nav').append('<a href="#">'+newLabel+'</a>');
+		$('.timeline nav').append('<a href="#">'+newLabel+'</a>');
     });
 }
 

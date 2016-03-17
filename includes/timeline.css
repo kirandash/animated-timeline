@@ -30,6 +30,7 @@ body {
 }
 
 .timeline .panel_container {
+	overflow: hidden;
 	position: relative; 
 	margin: 10px 0px 0px 0px; 
 	width: 100%; 
@@ -59,6 +60,7 @@ body {
 
 .timeline .panel_slider {
 	width: 100%;
+	position: absolute;
 }
 
 .timeline .panel {

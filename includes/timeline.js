@@ -13,6 +13,7 @@ $(document).ready(function() {
 	totalPanels = $('.timeline .panel').length;
 	
 	adjustLayout();
+	setInterval(checkWindowSize, 1000);
 	
 });
 
@@ -35,6 +36,7 @@ function activeNavigation(){
 	
 	$('.timeline nav a').on('click', function(){
 		currentPanel = $(this).index();
+		timelineWidth = $('.timeline').width();
 		
 		$('.timeline nav a').removeClass('selected');
 		$(this).addClass('selected');
@@ -56,3 +58,13 @@ function activeNavigation(){
 	});
 }
 
+function checkWindowSize() {
+	var newTimelineWidth = $('.timeline').width();
+	
+	timelineWidth = newTimelineWidth;
+	
+	if( firstRun == true ) {
+		$('.timeline nav a:nth-child('+(currentPanel+1)+')').trigger('click');
+		firstRun = false;
+	}
+}

@@ -161,3 +161,36 @@ body {
 .clear_both {
 	clear: both;
 }
+
+@media screen and (max-width: 500px) {
+	
+	.timeline {
+		margin: 0px;
+		background: #81194c url(../images/background_small.jpg) no-repeat center 0px;	
+	}
+	
+	.timeline h1 {
+		text-align: left;
+		padding: 10px 10px 10px 20px;
+	}
+	
+	.timeline .panel_container {
+		height: auto;
+		background: none;
+		filter: none;
+		margin: 0px;
+	}
+	
+	.timeline .panel_slider {
+		position: static;
+		height: auto;
+	}	
+	
+	.timeline .panel {
+		width: auto;
+		height: auto;
+		position: static;
+		border-top: 1px solid rgba(255,255,255,.3);
+		padding-bottom: 20px;	
+	}
+}

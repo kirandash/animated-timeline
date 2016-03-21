@@ -128,3 +128,36 @@ body {
 .timeline nav a.selected {
 	background-color: rgba(255,255,255,0.55);
 }
+
+.timeline .panel img.arpanet {
+	margin: 0 0 10px 0;	
+}
+
+.timeline .panel img.tcp {
+	float: left;
+	margin: 10px 20px 0px 0;	
+}
+
+.timeline .panel img.tcp_ip {
+	float: left;
+	margin-right: 20px;	
+}
+
+.timeline .panel img.www {
+	float: left;
+	margin: 10px 15px 0 0;	
+}
+
+.timeline .panel img.voip {
+	float: right;
+	margin: 10px 0 0 10px;	
+}
+
+.timeline .panel img.telecommunications_usage {
+	float: right;
+	margin: 10px 30px 0 10px;	
+}
+
+.clear_both {
+	clear: both;
+}
